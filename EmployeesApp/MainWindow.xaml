@@ -1,0 +1,16 @@
+﻿<Window x:Class="EmployeesApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Employee Project Analysis" Height="350" Width="600">
+    <Grid>
+        <Button Name="LoadButton" Content="Load CSV File" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="100" Click="LoadButton_Click"/>
+        <DataGrid Name="ResultsGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="200" Width="550">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee ID #1" Binding="{Binding EmpID1}" Width="*"/>
+                <DataGridTextColumn Header="Employee ID #2" Binding="{Binding EmpID2}" Width="*"/>
+                <DataGridTextColumn Header="Project ID" Binding="{Binding ProjectID}" Width="*"/>
+                <DataGridTextColumn Header="Days Worked" Binding="{Binding DaysWorked}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
